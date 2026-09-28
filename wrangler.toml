@@ -1,0 +1,16 @@
+# Only needed if you deploy from the command line with Wrangler.
+name = "fred-layovers-api"
+main = "worker.js"
+compatibility_date = "2026-09-01"
+
+[vars]
+# Your GitHub Pages origin. Comma-separate several; "*" allows any site.
+ALLOWED_ORIGIN = "https://312as.org,http://312as.org,https://www.312as.org"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "fred-layovers"
+database_id = "PASTE-DATABASE-ID-HERE"
+
+# Set the write code as a secret, not here:
+#   npx wrangler secret put POST_CODE
